@@ -1,0 +1,76 @@
+
+--------------------------------------------------
+/*
+Navicat MySQL Data Transfer
+
+Source Server         : node03
+Source Server Version : 50547
+Source Host           : node03:3306
+Source Database       : sessionanalyze
+
+Target Server Type    : MYSQL
+Target Server Version : 50547
+File Encoding         : 65001
+
+Date: 2019-08-15 20:17:33
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for city_info
+-- ----------------------------
+DROP TABLE IF EXISTS `city_info`;
+CREATE TABLE `city_info` (
+  `city_id` int(11) DEFAULT NULL,
+  `city_name` varchar(255) DEFAULT NULL,
+  `area` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of city_info
+-- ----------------------------
+INSERT INTO `city_info` VALUES ('0', '北京', '华北');
+INSERT INTO `city_info` VALUES ('1', '上海', '华东');
+INSERT INTO `city_info` VALUES ('2', '南京', '华东');
+INSERT INTO `city_info` VALUES ('3', '广州', '华南');
+INSERT INTO `city_info` VALUES ('4', '三亚', '华南');
+INSERT INTO `city_info` VALUES ('5', '武汉', '华中');
+INSERT INTO `city_info` VALUES ('6', '长沙', '华中');
+INSERT INTO `city_info` VALUES ('7', '西安', '西北');
+INSERT INTO `city_info` VALUES ('8', '成都', '西南');
+INSERT INTO `city_info` VALUES ('9', '哈尔滨', '东北');
+
+--------------------------------------------------
+/*
+Navicat MySQL Data Transfer
+
+Source Server         : node03
+Source Server Version : 50547
+Source Host           : node03:3306
+Source Database       : sessionanalyze
+
+Target Server Type    : MYSQL
+Target Server Version : 50547
+File Encoding         : 65001
+
+Date: 2019-08-16 11:34:56
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for area_top3_product
+-- ----------------------------
+DROP TABLE IF EXISTS `area_top3_product`;
+CREATE TABLE `area_top3_product` (
+  `area` varchar(255) DEFAULT NULL,
+  `area_level` varchar(255) DEFAULT NULL,
+  `product_id` int(11) DEFAULT NULL,
+  `city_infos` varchar(255) DEFAULT NULL,
+  `click_count` int(11) DEFAULT NULL,
+  `product_name` varchar(255) DEFAULT NULL,
+  `product_status` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--------------------------------------------------

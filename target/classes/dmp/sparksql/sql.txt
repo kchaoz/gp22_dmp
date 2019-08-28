@@ -1,0 +1,37 @@
+
+--创建utf8编码的province_and_city_name_info表
+DROP TABLE IF EXISTS `province_and_city_name_info`;
+CREATE TABLE `province_and_city_name_info` (
+  `ct` int(11) DEFAULT NULL,
+  `provincename` varchar(255) DEFAULT NULL,
+  `cityname` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--媒体分析表格创建
+DROP TABLE IF EXISTS `media_analysis_info`;
+CREATE TABLE `media_analysis_info` (
+  `appname` varchar(50),
+
+  `origin_request_count` int,
+  `effective_request_count` int,
+  `ad_request_count` int,
+
+  `join_bid_count` int,
+  `bid_success_count` int,
+
+  `show_count` int,
+  `click_count` int,
+
+  `dsp_ad_consume` int,
+  `dsp_ad_cost` int
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+
+
+
+
+
+
